@@ -6,6 +6,14 @@ import sys
 
 records = []
 
+def loading_animation():
+    animation = "|/-\\"
+    print("Loading", end="")
+    for i in range(15):
+        sys.stdout.write("\rLoading " + animation[i % len(animation)])
+        sys.stdout.flush()
+        time.sleep(0.1)
+    print("\rLoading complete!     ")
 
 
 def recursive_count(lst):
